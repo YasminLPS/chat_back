@@ -1,0 +1,21 @@
+# Chat API
+
+Uma API RESTful para gerenciar mensagens de chat, construída com Django Rest Framework.
+
+## Funcionalidades
+
+A API fornece as seguintes rotas para gerenciar mensagens:
+
+- **POST /messages**: Salva uma nova mensagem no "banco de dados" (simulado com uma lista em memória).
+  - Campos esperados no payload:
+    - `id`: Identificador único (UUID gerado automaticamente, caso não enviado).
+    - `content`: Conteúdo da mensagem (obrigatório).
+    - `sender`: Nome do remetente (obrigatório).
+    - `timestamp`: Data/hora do envio (gerado automaticamente, caso não enviado).
+- **GET /messages**: Retorna todas as mensagens salvas, ordenadas por `timestamp`.
+
+## Tecnologias Utilizadas
+
+- **Python 3.13+**
+- **Django 5.1+**
+- **Django Rest Framework**
